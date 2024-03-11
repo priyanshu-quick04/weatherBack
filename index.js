@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors(
   {
-    origin:["https://weather-frontend-liart.vercel.app"],
+    origin:["https://weather-frontend-liart.vercel.app/"],
     methods:["POST","GET"],
     credentials: false
 ));
