@@ -32,7 +32,7 @@ app.use(cors(
   {
     origin:["https://weather-frontend-liart.vercel.app"],
     methods:["POST","GET"],
-    credentials: false
+    credentials: true
 ));
 
 app.use(function(req, res, next) {
