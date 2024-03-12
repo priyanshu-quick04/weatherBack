@@ -28,14 +28,14 @@ const User = new mongoose.model("User", userSchema);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors(
-  {
-    origin:["https://weather-frontend-liart.vercel.app/"],
-    methods:["POST","GET"],
-    credentials: false
-));
+app.use(cors())
+const corsOptions ={
+   origin:'*', 
+   credentials:true,      
+   optionSuccessStatus:200,
+}
 
-
+app.use(cors(corsOptions))
 
 app.get("/", (req, res) => {
   res.send("Hello World");
